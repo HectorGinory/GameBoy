@@ -5,18 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="index.css" rel="stylesheet" >
 </head>
 <body>
     <div class="gameboy-container">
-        <div class="screen-container"></div>
-        <p>Nintendo<span>GAME BOY</span>TM</p>
+        <div class="screen-container">
+            <div class="text">
+                <div class="lines"></div>
+                <span>DOT MATRIX WITH STEREO</span>
+                <div class="lines"></div>
+            </div>
+            <div class="main-screen">
+                <div class="battery"></div>
+                <div class="screen"></div>
+            </div>
+        </div>
+        <div class="nintendo-text">
+            <span>Nintendo </span>
+            <div class="text-transform">
+                <p>GAME BOY</p>
+            </div>
+            <span>TM</span>
+        </div>
         <div class="gamepad-container">
-            
+            <div class="left-gamepad">
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+            <div class="right-gamepad">
+                <button></button>
+                <button></button>
+            </div>
         </div>
         <div class="select-start">
-            <button class="select">select</button>
-            <button class="start">start</button>
+            <button class="select"></button>
+            <button class="start"></button>
         </div>
     </div>
+    <button class="btn-off"></button>
 </body>
 </html>
