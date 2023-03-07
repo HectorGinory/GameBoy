@@ -1,30 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@font-face {
-    font-family: 'nintendo';
-    src: url('sources/font/Pretendo.ttf') format('woff2');
-}
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-button:hover {
-    filter: brightness(.8);
-}
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'nintendo', Fallback, sans-serif;
-    flex-direction: column;
-}
-
-.gameboy-container {
+.gameboy-containerOn {
     width: 375px;
     height: 600px;
-    background: rgb(182, 185, 176);
+    background: linear-gradient(to top, rgb(142, 144, 137), rgb(182, 185, 176));
     border-radius: 10px 10px 70px 10px;
     display: flex;
     align-items: center;
@@ -33,7 +10,7 @@ body {
                 inset 0px 0px 2px rgba(0, 0, 0, 0.555);
 }
 
-.top-decoration {
+.gameboy-containerOn .top-decoration {
     width: 100%;
     height: 30px;
     border-bottom: 4px solid rgba(0, 0, 0, 0.253);
@@ -41,23 +18,23 @@ body {
     justify-content: space-between;
 }
 
-.top-decoration .gap {
+.gameboy-containerOn .top-decoration .gap {
     width: 30px;
     height: 30px;
     border-right: 4px solid rgba(0, 0, 0, 0.253);
 }
-.top-decoration .gap:nth-child(3) {
+.gameboy-containerOn .top-decoration .gap:nth-child(3) {
     border-right: 0px solid transparent;
     border-left: 4px solid rgba(0, 0, 0, 0.253);
 }
 
-.on-off {
+.gameboy-containerOn .on-off {
     width: calc(100% - 68px);
     display: flex;
     align-items: center;
 }
 
-.on-off p {
+.gameboy-containerOn .on-off p {
     background: rgba(0, 0, 0, 0.253);
     padding: 5px 10px;
     margin-left: 5px;
@@ -66,7 +43,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
 }
-.screen-container {
+.gameboy-containerOn .screen-container {
     margin-top: 20px ;
     width: 80%;
     height: 250px;
@@ -81,7 +58,7 @@ body {
     flex-direction: column;
 }
 
-.screen-container .text {
+.gameboy-containerOn .screen-container .text {
     width: 95%;
     height: 20px;
     font-family: 'Press Start 2P', cursive;
@@ -93,25 +70,25 @@ body {
     gap: 5px;
 }
 
-.screen-container .text .lines {
+.gameboy-containerOn .screen-container .text .lines {
     width: 100px;
     height: 3px;
     border-top: 2.5px solid rgb(185, 8, 82);
     border-bottom: 2.5px solid rgb(16, 16, 119);
 }
 
-.screen-container .text .lines:nth-child(3) {
+.gameboy-containerOn .screen-container .text .lines:nth-child(3) {
     width: 40px;
 }
 
-.main-screen {
+.gameboy-containerOn .main-screen {
     height: 210px;
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.screen {
+.gameboy-containerOn .screen {
     width: 200px;
     height: 200px;
     background: rgb(73, 92, 39);
@@ -119,7 +96,7 @@ body {
     border: 2px solid rgba(0, 0, 0, 0.651);
 }
 
-.battery {
+.gameboy-containerOn .battery {
     width: 7px;
     height: 7px;
     background: rgb(82, 1, 1);
@@ -130,7 +107,7 @@ body {
     bottom: 30px;
 }
 
-.battery::after {
+.gameboy-containerOn .battery::after {
     content: 'BATTERY';
     font-family: 'Press Start 2P', cursive;
     font-size: 6px;
@@ -139,28 +116,28 @@ body {
     top: 7px;
     right: 15px;
 }
-.nintendo-text {
+.gameboy-containerOn .nintendo-text {
     width: 80%;
     color: rgb(16, 16, 119);
 }
 
-.nintendo-text span {
+.gameboy-containerOn .nintendo-text span {
     font-weight: 600;
     font-size: 12px;
 }
 
-.nintendo-text .text-transform {
+.gameboy-containerOn .nintendo-text .text-transform {
     font-size: 22px;
     font-weight: 400;
     text-shadow: 0px 0px 0.5px rgb(16, 16, 119);
     display: inline-flex;
     transform: skew(-10deg, 0deg);
 }
-.nintendo-text span:nth-child(3) {
+.gameboy-containerOn .nintendo-text span:nth-child(3) {
     font-size: 9px;
 }
 
-.gamepad-container {
+.gameboy-containerOn .gamepad-container {
     width: 80%;
     height: 100px;
     margin-top: 50px;
@@ -169,7 +146,7 @@ body {
     justify-content: space-between;
 }
 
-.left-gamepad {
+.gameboy-containerOn .left-gamepad {
     width: 90px;
     height: 90px;
     display: flex;
@@ -177,7 +154,7 @@ body {
     align-items: center;
 }
 
-.left-gamepad button {
+.gameboy-containerOn .left-gamepad button {
     width: 30px;
     height: 30px;
     border-radius: 0px;
@@ -186,22 +163,22 @@ body {
     box-shadow: inset 0px 4px 2px 0px rgba(255, 255, 255, 0.212);
 }
 
-.left-gamepad button:first-child {
+.gameboy-containerOn .left-gamepad button:first-child {
     margin: 0px 30px
 }
 
-.left-gamepad button:nth-child(2) {
+.gameboy-containerOn .left-gamepad button:nth-child(2) {
     margin-right:30px;
     box-shadow: inset 0px 4px 2px 0px rgba(255, 255, 255, 0.212),
                 30px 0px rgb(43, 43, 43);
 }
 
-.left-gamepad button:nth-child(4) {
+.gameboy-containerOn .left-gamepad button:nth-child(4) {
     margin: 0px 30px;
     box-shadow: 0px 0px 0px ;
 }
 
-.right-gamepad {
+.gameboy-containerOn .right-gamepad {
     width: 120px;
     height: 90px;
     display: flex;
@@ -209,7 +186,7 @@ body {
     justify-content: space-around;
 }
 
-.right-gamepad button {
+.gameboy-containerOn .right-gamepad button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -221,7 +198,7 @@ body {
     transform: rotate(-20deg);
 }
 
-.right-gamepad button::after {
+.gameboy-containerOn .right-gamepad button::after {
     content: 'B';
     position: relative;
     bottom: -40px;
@@ -229,15 +206,15 @@ body {
     font-size: 12px;
     color: rgb(16, 16, 119);
 }
-.right-gamepad button:nth-child(2) {
+.gameboy-containerOn .right-gamepad button:nth-child(2) {
     transform: translateY(-25px) rotate(-20deg)
 }
 
-.right-gamepad button:nth-child(2)::after {
+.gameboy-containerOn .right-gamepad button:nth-child(2)::after {
     content: 'A';
 }
 
-.select-start {
+.gameboy-containerOn .select-start {
     width: 50%;
     display: flex;
     align-items: center;
@@ -245,7 +222,7 @@ body {
     gap: 12px;
 }
 
-.select-start button {
+.gameboy-containerOn .select-start button {
     margin-top: 30px;
     width: 50px;
     height: 10px;
@@ -255,7 +232,7 @@ body {
     transform: rotate(-20deg);
 }
 
-.select-start button::after {
+.gameboy-containerOn .select-start button::after {
     content: 'SELECT';
     position: relative;
     bottom: -12px;
@@ -264,12 +241,12 @@ body {
     color: rgb(16, 16, 119);
 }
 
-.select-start button:nth-child(2):after {
+.gameboy-containerOn .select-start button:nth-child(2):after {
     content: 'START';
     bottom: -11px;
 }
 
-.btn-off {
+.btn-on {
     height: 5px;
     width: 20px;
     border: 1px solid rgba(0, 0, 0, 0.199);
@@ -277,5 +254,6 @@ body {
     border-radius: 10px 10px 0px 0px;
     background: rgb(182, 185, 176);
     position: relative;
-    right: 100px;
+    right: 130px;
+    transition: .5s;
 }

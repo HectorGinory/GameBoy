@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="styles/index.css" rel="stylesheet" >
+    <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-    <button class="btn-off"></button>
-    <div class="gameboy-container">
+    <!-- Hacer mayor uso de ID si es algo único -->
+    <button class="btn-off" id="power-btn" onclick="powerBtn()"></button>
+    <div class="gameboy-container" id="gameboy">
         <div class="top-decoration">
             <div class="gap"></div>
             <div class="on-off">
@@ -52,5 +53,6 @@
             <button class="start"></button>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
