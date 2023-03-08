@@ -94,17 +94,20 @@
     background: rgb(73, 92, 39);
     border-radius: 3px;
     border: 2px solid rgba(0, 0, 0, 0.651);
+    box-shadow: inset 0px 0px 10px rgb(129, 147, 13);
+    transition: .5s;
 }
 
 .gameboy-containerOn .battery {
     width: 7px;
     height: 7px;
-    background: rgb(82, 1, 1);
+    background: rgb(205, 0, 0);
     border-radius: 50%;
     border: 1px solid black;
     position: relative;
     right: 22px;
     bottom: 30px;
+    box-shadow: 0px 0px 10px red;
 }
 
 .gameboy-containerOn .battery::after {
