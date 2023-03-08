@@ -143,6 +143,11 @@
     opacity: 0;
     filter: sepia(1) brightness(.3) saturate(1.3) hue-rotate(40deg);
 }
+.game .pikachu {
+    height: 2em;
+    opacity: 0;
+    filter: sepia(1) brightness(.3) saturate(1.3) hue-rotate(40deg);
+}
 .gameboy-container .battery::after {
     content: 'BATTERY';
     font-family: 'Press Start 2P', cursive;
