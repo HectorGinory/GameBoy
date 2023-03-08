@@ -1,57 +1,67 @@
 .gameboy-container {
-    width: 375px;
-    height: 600px;
-    background: linear-gradient(to top, rgb(142, 144, 137), rgb(182, 185, 176));
-    border-radius: 10px 10px 70px 10px;
+    width: 23.5em;
+    height: 37.5em;
+    background: linear-gradient(to top, #C3C2BD, #B5B4B1);
+    border-radius: 1.2em 1.2em 4.5em 1.2em;
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.555),
-                inset 0px 0px 2px rgba(0, 0, 0, 0.555);
+    box-shadow: inset 0 0 0.5em rgba(0, 0, 0, 0.379),
+                inset 0 0.6em 0.9em rgba(255, 255, 255, 0.886),
+                inset -0.3em 0em 0.9em rgba(255, 255, 255, 0.535),
+                inset 0.3em 0em 0.3em rgba(0, 0, 0, 0.357),
+                inset 0em -0.3em 0.3em rgba(0, 0, 0, 0.293);
 }
 
 .gameboy-container .top-decoration {
     width: 100%;
-    height: 30px;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.253);
+    height: 2em;
+    border-bottom: 0.2em solid rgb(162, 166, 154);
     display: flex;
     justify-content: space-between;
+    border-radius: 1.2em 1.2em 0 0;
+    box-shadow: 0 0.1em 0.2em rgba(255, 255, 255, 0.526),
+                inset 0 -0.1em 0.2em rgba(0, 0, 0, 0.298);
 }
 
 .gameboy-container .top-decoration .gap {
-    width: 30px;
-    height: 30px;
-    border-right: 4px solid rgba(0, 0, 0, 0.253);
+    width: 2em;
+    height: 2em;
+    border-right: 0.3em solid rgb(162, 166, 154);
 }
 .gameboy-container .top-decoration .gap:nth-child(3) {
-    border-right: 0px solid transparent;
-    border-left: 4px solid rgba(0, 0, 0, 0.253);
+    border-right: 0 solid transparent;
+    border-left: 0.3em solid rgb(162, 166, 154);
 }
 
 .gameboy-container .on-off {
-    width: calc(100% - 68px);
+    width: calc(100% - 0.6em);
     display: flex;
     align-items: center;
 }
 
 .gameboy-container .on-off p {
     background: rgba(0, 0, 0, 0.253);
-    padding: 5px 10px;
-    margin-left: 5px;
-    border-radius: 20px;
+    padding: 0.3em 0.6em;
+    margin-left: 0.3em;
+    border-radius: 1.2em;
     color: rgb(182, 185, 176);
     font-family: 'Press Start 2P', cursive;
-    font-size: 8px;
+    font-size: 0.5em;
 }
 .gameboy-container .screen-container {
-    margin-top: 20px ;
+    margin-top: 1.2em;
     width: 80%;
-    height: 250px;
+    height: 15.5em;
     background: rgb(106, 101, 109);
-    border-radius: 10px 10px 40px 10px;
-    border: 2px solid rgb(88, 83, 90);
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.555),
-                inset 0px 0px 1px rgba(0, 0, 0, 0.555);
+    border-radius: 0.6em 0.6em 2.4em 0.6em;
+    border: 0.1em solid rgb(82, 79, 83);
+    box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.734),
+                inset 0 0 0.1em rgb(0, 0, 0),
+                0 0.05em 0.1em rgb(0, 0, 0),
+                0 -0.03em 0.1em black,
+                inset 0 -0.03em 0.1em white,
+                inset 0 0.1em 0.1em rgba(255, 255, 255, 0.665);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -60,53 +70,79 @@
 
 .gameboy-container .screen-container .text {
     width: 95%;
-    height: 20px;
+    height: 2.5em;
     font-family: 'Press Start 2P', cursive;
-    font-size: 6px;
+    font-size: 0.3em;
     color: rgb(182, 185, 176);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.4em;
 }
 
 .gameboy-container .screen-container .text .lines {
-    width: 100px;
-    height: 3px;
+    width: 22em;
+    height: 0.4em;
     border-top: 2.5px solid rgb(185, 8, 82);
     border-bottom: 2.5px solid rgb(16, 16, 119);
 }
 
 .gameboy-container .screen-container .text .lines:nth-child(3) {
-    width: 40px;
+    width: 2rem;
 }
 
 .gameboy-container .main-screen {
-    height: 210px;
+    height: 13.1rem;
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .gameboy-container .screen {
-    width: 200px;
-    height: 200px;
-    background: rgb(73, 92, 39);
-    border-radius: 3px;
-    border: 2px solid rgba(0, 0, 0, 0.651);
+    width: 12.5rem;
+    height: 12.5rem;
+    background: linear-gradient(to top, #5d701c, #526515);
+    border-radius: 0.2rem;
+    border: 0.115rem solid rgba(0, 0, 0, 0.274);
+    box-shadow: inset 0.05rem 0.05rem 0.1rem 0.0.5rem rgba(0, 0, 0, 0.284);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
+.gameboy-container .screen p {
+    font-size: 1em;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    transform: translateY(-200px);
+    opacity: 0;
+}
 .gameboy-container .battery {
     width: 7px;
     height: 7px;
     background: rgb(82, 1, 1);
     border-radius: 50%;
-    border: 1px solid black;
+    border: 0.05em solid black;
     position: relative;
     right: 22px;
     bottom: 30px;
 }
-
+.game {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    flex-direction: column;
+}
+.game img {
+    transition: .5s;
+    opacity: 0;
+    filter: sepia(1) brightness(.3) saturate(1.3) hue-rotate(40deg);
+}
 .gameboy-container .battery::after {
     content: 'BATTERY';
     font-family: 'Press Start 2P', cursive;
@@ -154,30 +190,46 @@
     align-items: center;
 }
 
+.left-gamepad div {
+    width: 100%;
+    height: calc(100% / 3);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-gamepad div div {
+    width: 30px;
+    height: 30px;
+    border-radius: 0px;
+    border: 0px solid transparent;
+    background: rgb(43, 43, 43);
+}
 .gameboy-container .left-gamepad button {
     width: 30px;
     height: 30px;
     border-radius: 0px;
     border: 0px solid transparent;
     background: rgb(43, 43, 43);
-    box-shadow: inset 0px 4px 2px 0px rgba(255, 255, 255, 0.212);
+    border-radius: 0.4em 0.4em 0 0;
+    box-shadow: inset -0.2em 0.2em rgba(255, 255, 255, 0.172);
 }
 
-.gameboy-container .left-gamepad button:first-child {
-    margin: 0px 30px
+#left {
+    transform: rotate(-90deg);
+    box-shadow: inset -0.2em 0em 0 rgba(255, 255, 255, 0.224);
 }
 
-.gameboy-container .left-gamepad button:nth-child(2) {
-    margin-right:30px;
-    box-shadow: inset 0px 4px 2px 0px rgba(255, 255, 255, 0.212),
-                30px 0px rgb(43, 43, 43);
+
+#right {
+    transform: rotate(90deg);
+    box-shadow: inset 0.2em 0.2em 0.2em rgba(255, 255, 255, 0.224);
 }
 
-.gameboy-container .left-gamepad button:nth-child(4) {
-    margin: 0px 30px;
-    box-shadow: 0px 0px 0px ;
+#down {
+    transform: rotate(180deg);
+    box-shadow: inset -0.2em 0.2em 0.2em rgba(16, 16, 16, 0.775);
 }
-
 .gameboy-container .right-gamepad {
     width: 120px;
     height: 90px;
@@ -194,7 +246,10 @@
     background: rgb(185, 8, 82);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.555),
                 inset 0px 0px 2px rgba(0, 0, 0, 0.555),
-                2px 2px 4px rgba(0, 0, 0, 0.212);
+                2px 2px 0.3em rgba(0, 0, 0, 0.212),
+                inset 0 0 0.2em 0.25em rgb(185, 8, 82),
+                inset 0.4em -0.4em 0.5em rgba(255, 255, 255, 0.357),
+                inset -0.3em 0.3em 0.4em rgba(255, 255, 255, 0.185);
     transform: rotate(-20deg);
 }
 
@@ -228,8 +283,11 @@
     height: 10px;
     background: grey;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.253);
+    border: 0.05rem solid rgba(0, 0, 0, 0.202);
     transform: rotate(-20deg);
+    box-shadow: inset -0.1em 0.1em 0.2em rgba(255, 255, 255, 0.474),
+                inset 0.1em -0.1em 0.2em rgba(6, 6, 6, 0.347),
+                0.2em 0.2em 0.3em rgba(0, 0, 0, 0.163);
 }
 
 .gameboy-container .select-start button::after {
@@ -256,4 +314,61 @@
     position: relative;
     right: 100px;
     transition: .5s;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    position: relative;
+    top: 4.5em;
+}
+
+.phone p {
+    background: rgba(0, 0, 0, 0.253);
+    padding: 0.3em 0.6em;
+    margin-left: 0.3em;
+    border-radius: 1.2em;
+    color: rgb(182, 185, 176);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5em;
+    border: 0.5em solid rgb(182, 185, 176);
+    box-shadow: 0 0 07.em black;
+}
+
+.phone p::first-letter {
+    font-size: 1.2em;
+}
+
+.decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    position: relative;
+    left: 14em;
+    bottom: 6em;
+    transform: rotate(-40deg);
+}
+
+.decoration::after {
+    content: '';
+    width: 15em;
+    height: 5em;
+    background: rgba(255, 255, 255, 0.264);
+    position: relative;
+    bottom: -3em;
+    right: 12em;
+}
+
+.decoration .oval {
+    width: 0.5em;
+    height: 2.5em;
+    border-radius: 2em;
+    background: rgb(182, 185, 176);
+    border: 0.05em solid rgba(0, 0, 0, 0.414);
+    box-shadow: 0.1em -0.1em 0.2em rgba(255, 255, 255, 0.459),
+                inset -0.1em 0.1em 0.3em rgba(0, 0, 0, 0.181),
+                inset 0.03em -0.1em 0.2em rgba(0, 0, 0, 0.744);
 }

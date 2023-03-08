@@ -5,18 +5,10 @@ function powerBtn() {
     if (document.getElementsByClassName('btn-off').length == 1) {
         powerBtn.classList.remove('btn-off');
         powerBtn.classList.add('btn-on');
-        gameboy.classList.remove('gameboy-container');
-        gameboy.classList.add('gameboy-containerOn');
+        gameboy.classList.add('On');
     } else {
         powerBtn.classList.remove('btn-on');
         powerBtn.classList.add('btn-off');
-        gameboy.classList.remove('gameboy-containerOn');
-        gameboy.classList.add('gameboy-container');
+        gameboy.classList.remove('On');
     }
-}
-
-let screenVideo() {
-    let screen = document.getElementById('screen')
-
-    let nintendoLogo
 }

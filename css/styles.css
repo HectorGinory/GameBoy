@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('powerOn.css');
 @import url('powerOff.css');
+@import url('powerOn.css');
 @font-face {
     font-family: 'nintendo';
     src: url('sources/font/Pretendo.ttf') format('woff2');
