@@ -111,6 +111,10 @@
     overflow: hidden;
 }
 
+.gameboy-container .screen img {
+    opacity: 0;
+}
+
 .gameboy-container .screen p {
     font-size: 1em;
     color: black;
@@ -128,7 +132,7 @@
     right: 22px;
     bottom: 30px;
 }
-.game {
+.start {
     width: 200px;
     height: 200px;
     display: flex;
@@ -138,12 +142,12 @@
     opacity: 0;
     flex-direction: column;
 }
-.game img {
+.start img {
     transition: .5s;
     opacity: 0;
     filter: sepia(1) brightness(.3) saturate(1.3) hue-rotate(40deg);
 }
-.game .pikachu {
+.start .pikachu {
     height: 2em;
     opacity: 0;
     filter: sepia(1) brightness(.3) saturate(1.3) hue-rotate(40deg);
@@ -341,7 +345,9 @@
     border: 0.5em solid rgb(182, 185, 176);
     box-shadow: 0 0 07.em black;
 }
-
+.gamefreak {
+    opacity: 0;
+}
 .phone p::first-letter {
     font-size: 1.2em;
 }

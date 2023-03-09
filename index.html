@@ -1,84 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="css/styles.css" rel="stylesheet"/>
-</head>
-<body>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- Hacer mayor uso de ID si es algo único -->
     <button class="btn-off" id="power-btn" onclick="powerBtn()"></button>
     <div class="gameboy-container" id="gameboy">
-        <div class="top-decoration">
-            <div class="gap"></div>
-            <div class="on-off">
-                <p>On/Off</p>
-            </div>
-            <div class="gap"></div>
+      <div class="top-decoration">
+        <div class="gap"></div>
+        <div class="on-off">
+          <p>On/Off</p>
         </div>
-        <div class="screen-container">
-            <div class="text">
-                <div class="lines"></div>
-                <span>DOT MATRIX WITH STEREO</span>
-                <div class="lines"></div>
+        <div class="gap"></div>
+      </div>
+      <div class="screen-container">
+        <div class="text">
+          <div class="lines"></div>
+          <span>DOT MATRIX WITH STEREO</span>
+          <div class="lines"></div>
+        </div>
+        <div class="main-screen" id="screen">
+          <div class="battery"></div>
+          <div class="screen">
+            <p>Nintendo®</p>
+            <div class="intro Off" id="intro-1">
+              <p>®1995-1999 Nintendo</p>
+              <p>®1995-1999 Creatures Inc.</p>
+              <p>®1995-1999 GAME FREAK inc.</p>
             </div>
-            <div class="main-screen">
-                <div class="battery"></div>
-                <div class="screen" id="screen">
-                    <p>Nintendo®</p>
-                <div class="game">
-                    <img src="sources/img/pokemon.png" alt="pokemonLogo">
-                    <p>Press START</p>
-                    <img src="sources/img/pikachu.png" alt="pikachu" class="pikachu">
+            <div class="intro Off" id="intro-2">
+              <div class="border"></div>
+              <div class="gamefreak">
+                <img src="sources/img/gamefreak.png" alt="gamefreak" />
+              </div>
+              <div class="border"></div>
+            </div>
+            <div class="intro Off" id="intro-3">
+              <div class="border"></div>
+              <div class="pikachuRunning">
+                <img
+                  src="sources/gif/pikachuRunning.gif"
+                  alt="pikachuRunning"
+                />
+              </div>
+              <div class="border"></div>
+            </div>
+            <div class="intro Off" id="intro-4">
+              <img
+                src="sources/gif/pikachuScroll.gif"
+                class="pikachuScroll"
+                alt="pikachuScroll"
+              />
+            </div>
+            <div class="intro Off" id="intro-5">
+              <p>PRESS START</p>
+              <img
+                src="sources/img/pokemon-yv.png"
+                class="pokemon-start"
+                alt="pokemon-start"
+              />
+            </div>
+            <div id="start-game" class="start-game Off">
+                <div class="menu-game">
+                    <p id="newGame">New game</p>
+                    <p id="options">Options</p>
                 </div>
-                </div>
             </div>
-        </div>
-        <div class="nintendo-text">
-            <span>Nintendo </span>
-            <div class="text-transform">
-                <p>GAME BOY</p>
+            <div class="intro Off" id="intro-6">
+                <img src="sources/img/Oak.png" class="oak"/>
             </div>
-            <span>TM</span>
+            <div class="intro Off" id="lowBattery">
+                <div class="lowBat"></div>
+            </div> 
+          </div>
         </div>
-        <div class="gamepad-container">
-            <div class="left-gamepad">
-                <div>
-                    <button id="up"></button>
-                </div>
-                <div>
-                    <button id="left"></button>
-                    <div></div>
-                    <button id="right"></button>
-                </div>
-                <div>
-                    <button id="down"></button>
-                </div>
-
-            </div>
-            <div class="right-gamepad">
-                <button></button>
-                <button></button>
-            </div>
+      </div>
+      <div class="nintendo-text">
+        <span>Nintendo </span>
+        <div class="text-transform">
+          <p>GAME BOY</p>
         </div>
-        <div class="select-start">
-            <button class="select"></button>
-            <button class="start"></button>
+        <span>TM</span>
+      </div>
+      <div class="gamepad-container">
+        <div class="left-gamepad">
+          <div>
+            <button id="up"></button>
+          </div>
+          <div>
+            <button id="left"></button>
+            <div></div>
+            <button id="right"></button>
+          </div>
+          <div>
+            <button id="down"></button>
+          </div>
         </div>
-        <div class="phone">
-            <p>☊ PHONES</p>
+        <div class="right-gamepad">
+          <button id="b-btn"></button>
+          <button id="aBtn"></button>
         </div>
-        <div class="decoration">
-            <div class="oval"></div>
-            <div class="oval"></div>
-            <div class="oval"></div>
-            <div class="oval"></div>
-            <div class="oval"></div>
-            <div class="oval"></div>
-        </div>
+      </div>
+      <div class="select-start">
+        <button></button>
+        <button id="btn-start"></button>
+      </div>
+      <div class="phone">
+        <p>☊ PHONES</p>
+      </div>
+      <div class="decoration">
+        <div class="oval"></div>
+        <div class="oval"></div>
+        <div class="oval"></div>
+        <div class="oval"></div>
+        <div class="oval"></div>
+        <div class="oval"></div>
+      </div>
     </div>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
