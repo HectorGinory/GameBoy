@@ -12,3 +12,4 @@ function powerBtn() {
         gameboy.classList.remove('On');
     }
 }
+

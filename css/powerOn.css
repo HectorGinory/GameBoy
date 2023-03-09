@@ -45,26 +45,28 @@
     transition: 1s;
     transition-delay: 5s;
     width: 70%;
+    opacity: 0.6;
 }
 
 .On .game p {
     margin-top: 1.5em;
     transform: translateY(0);
     transition-delay: 5s;
-    opacity: 0.9;
+    opacity: 0.7;
     color: rgb(16, 16, 16);
     text-shadow: 0 0 0.2em 0.1em black;
-    animation: startAni 6s infinite;
+    animation: startAni 2s infinite;
 }
 
 .On .game .pikachu {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     transition: 1s;
     transition-delay: 5s;
     opacity: 1;
-    height: 3em;
-    width: 5em;
+    height: 4em;
+    width: 5.5em;
     position: relative;
+    opacity: .7;
 }
 
 @keyframes startAni {
