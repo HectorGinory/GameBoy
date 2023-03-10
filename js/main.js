@@ -46,6 +46,7 @@ function powerBtn() {
       intro5.classList.remove("Off");
       pressStart();
     }, 22000);
+    
   } else {
     powerBtn.classList.remove("btn-on");
     powerBtn.classList.add("btn-off");
