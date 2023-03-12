@@ -1,67 +1,89 @@
-function powerBtn() {
-  let powerBtn = document.getElementById("power-btn");
-  let gameBoy = document.getElementById("gameboy");
-  let screen = document.getElementById("start");
-  let intro1 = document.getElementById("intro-1");
-  let intro2 = document.getElementById("intro-2");
-  let intro3 = document.getElementById("intro-3");
-  let intro4 = document.getElementById("intro-4");
-  let intro5 = document.getElementById("intro-5");
-  let intro6 = document.getElementById("intro-6");
-  let btnStart = document.getElementById("btn-start");
-  let lowBattery = document.getElementById("lowBattery");
+var powerBtn = document.getElementById("power-btn");
+var gameBoy = document.getElementById("gameboy");
+var intro1 = document.getElementById("intro-1");
+var intro2 = document.getElementById("intro-2");
+var intro3 = document.getElementById("intro-3");
+var intro4 = document.getElementById("intro-4");
+var intro5 = document.getElementById("intro-5");
+var intro6 = document.getElementById("intro-6");
+var lowBattery = document.getElementById("lowBattery");
+var powerOff = document.getElementById("powerOff")
+var menuNumber = 1;
+var off = true;
+powerBtn.addEventListener('click', () => {
+  onOff()
+})
 
-  if (document.getElementsByClassName("btn-off").length == 1) {
-    powerBtn.classList.remove("btn-off");
-    powerBtn.classList.add("btn-on");
+function onOff() {
+  intro1.classList.add("Off")
+  intro2.classList.add("Off");
+  intro3.classList.add("Off");
+  intro4.classList.add("Off");
+  intro5.classList.add("Off");
+  intro6.classList.add("Off");
+  lowBattery.classList.add("Off");
+
+  if (off) {
     gameboy.classList.add("On");
-    lowBattery.classList.add("Off");
+    powerBtn.classList.add("btn-on");
+    powerBtn.classList.remove("btn-off");
 
     setTimeout(() => {
-      intro1.classList.remove("Off");
-    }, 5000);
+      var intro1TO = setTimeout(() => {
+        removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO)
+        intro1.classList.remove("Off");
+      }, 5000);
+  
+      var intro2TO = setTimeout(() => {
+          removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO)
+          intro1.classList.add("Off");
+          intro2.classList.remove("Off");
+      }, 8000);
+  
+      var intro3TO = setTimeout(() => {
+          removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO)
+          intro2.classList.add("Off");
+          intro3.classList.remove("Off");
+      }, 12000);
+  
+      var intro4TO = setTimeout(() => {
+          removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO)
+          intro3.classList.add("Off");
+          intro4.classList.remove("Off");
+      }, 16000);
+  
+      var intro5TO = setTimeout(() => {
+          removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO)
+          intro4.classList.add("Off");
+          intro3.classList.remove("Off");
+      }, 18000);
+  
+      var intro6TO = setTimeout(() => {
+          removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO)
+          intro3.classList.add("Off");
+          intro5.classList.remove("Off");
+          pressStart();
+      }, 22000);
+    }, 2000)
 
-    setTimeout(() => {
-      intro1.classList.add("Off");
-      intro2.classList.remove("Off");
-    }, 8000);
+    off = false;
 
-    setTimeout(() => {
-      intro2.classList.add("Off");
-      intro3.classList.remove("Off");
-    }, 12000);
-
-    setTimeout(() => {
-      intro3.classList.add("Off");
-      intro4.classList.remove("Off");
-    }, 16000);
-
-    setTimeout(() => {
-      intro4.classList.add("Off");
-      intro3.classList.remove("Off");
-    }, 18000);
-
-    setTimeout(() => {
-      intro3.classList.add("Off");
-      intro5.classList.remove("Off");
-      pressStart();
-    }, 22000);
-    
   } else {
-    powerBtn.classList.remove("btn-on");
-    powerBtn.classList.add("btn-off");
-    gameboy.classList.remove("On");
-    screen.classList.remove("Off");
-    intro1.classList.add("Off");
-    intro2.classList.add("Off");
-    intro3.classList.add("Off");
-    intro4.classList.add("Off");
-    intro5.classList.add("Off");
-    intro6.classList.add("Off");
-    lowBattery.classList.add("Off");
+    consoleGoOff();
+    removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO);
+
   }
 }
-
+function removeTO(intro1TO, intro2TO, intro3TO, intro4TO, intro5TO, intro6TO) {
+  if (off) {
+    clearTimeout(intro1TO);
+    clearTimeout(intro2TO);
+    clearTimeout(intro3TO);
+    clearTimeout(intro4TO);
+    clearTimeout(intro5TO);
+    clearTimeout(intro6TO);
+  } 
+}
 function pressStart() {
   let intro5 = document.getElementById("intro-5");
   let btnStart = document.getElementById("btn-start");
@@ -85,9 +107,6 @@ function pressStart() {
     menuStart();
   });
 }
-
-let menuNumber = 1;
-
 function menuStart() {
   let newGame = document.getElementById("newGame");
   let options = document.getElementById("options");
@@ -97,19 +116,20 @@ function menuStart() {
   if (menuNumber == 1) {
     newGame.classList.add("selected");
     options.classList.remove("selected");
-    aBtn.addEventListener("click", function (e) {
-      oakScene();
-    });
   } else {
     options.classList.add("selected");
     newGame.classList.remove("selected");
-    aBtn.addEventListener("click", function (e) {
-        
-    intro6.classList.add("Off");
-      startGame.classList.add("Off");
-      lowBattery();
-    });
   }
+
+  aBtn.addEventListener("click", function (e) {
+    if(menuNumber == 1 ) {
+      oakScene();
+    } else {
+      intro6.classList.add("Off");
+      startGame.classList.add("Off");
+      lowBatteryFunct();
+    } 
+  });
 }
 
 function menuDown() {
@@ -137,15 +157,34 @@ function oakScene() {
 
   setTimeout(() => {
     intro6.classList.add("Off");
-    lowBattery();
+    lowBatteryFunct();
+  }, 4000);
+}
+
+function lowBatteryFunct() {
+  intro6.classList.add("Off");
+  lowBattery.classList.remove("Off");
+  setTimeout(() => {
+    consoleGoOff() 
   }, 2000);
 }
 
-function lowBattery() {
-  let lowBattery = document.getElementById("lowBattery");
-  lowBattery.classList.remove("Off");
 
+function consoleGoOff() {
+  intro1.classList.add("Off")
+  intro2.classList.add("Off");
+  intro3.classList.add("Off");
+  intro4.classList.add("Off");
+  intro5.classList.add("Off");
+  intro6.classList.add("Off");
+  lowBattery.classList.add("Off");
+  powerOff.classList.remove("Off")
+  
   setTimeout(() => {
-    powerBtn();
-  }, 4000);
+  powerBtn.classList.remove("btn-on");
+  powerBtn.classList.add("btn-off");
+  powerOff.classList.add("Off");
+  gameboy.classList.remove("On");
+  off = true;
+  }, 4000)
 }
