@@ -10,7 +10,7 @@ var lowBattery = document.getElementById("lowBattery");
 var powerOff = document.getElementById("powerOff")
 var menuNumber = 1;
 var off = true;
-powerBtn.addEventListener('click', () => {
+var btnPowerListener = powerBtn.addEventListener('click', () => {
   onOff()
 })
 
@@ -187,4 +187,7 @@ function consoleGoOff() {
   gameboy.classList.remove("On");
   off = true;
   }, 4000)
+
+  removeEventListener(btnPowerListener)
+  
 }

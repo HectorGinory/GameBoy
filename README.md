@@ -1,5 +1,4 @@
 # Game Boy with CSS #
----
 
 - **Author:** Héctor Ginory Alemán
 <br>
@@ -8,7 +7,6 @@
 <br>
 
 ## Objectives ##
----
 
 ##### Git/github #####
 
@@ -26,4 +24,9 @@
 <br>
 
 ## Funcionality ##
----
+
+The challenge to create the the image reproduced
+front of my game console favorite laptop with css and flexbox.
+
+I create the front of a Game Boy.
+
