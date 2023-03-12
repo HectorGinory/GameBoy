@@ -35,17 +35,17 @@ I create the front of a Game Boy.
 The gameboy is interactive so you can turn it on in the top button.
 In the screen will start the Pokemon Yellow game.
 
-![gameboy animation](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/consoleOn.GIF)
+![gameboy animation](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/consoleOn.gif)
 
 After you see the animation at the beginning you will see a screen with a press start, so lets try it!
 
-![press start animation](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/pressStart.GIF)
+![press start animation](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/pressStart.gif)
 
 After you click start you will have two options. You can decide which one you want, press A to select. 
 
 When you press A, it appear the "low battery" screen and the console will turn off.
 
-![low battery screen](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/consoleOn.GIF)
+![low battery screen](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/consoleOn.gif)
 
 
 In a future I`ll like to imrprove the project by cleaning the code and adding more things of the original game.
@@ -54,4 +54,4 @@ In a future I`ll like to imrprove the project by cleaning the code and adding mo
 
  Right now the only bug i found its that if you turn the console off and on In less than 4s. The screen will reproduce two animations at the same time.
 
-![low battery screen](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/bug.GIF)
+![low battery screen](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/bug.gif)
