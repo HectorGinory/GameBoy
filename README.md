@@ -44,7 +44,7 @@ When you click start you will have two options. You can decide which one you wan
 
 When you press A, it appear the "low battery" screen and the console will turn off.
 
-![low battery screen](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/consoleOn.gif)
+![low battery screen](https://github.com/HectorGinory/GameBoy/blob/main/sources/gif/lowBattery.gif)
 
 
 In a future I´ll like to improve the project by cleaning the code and adding more things of the original game.
