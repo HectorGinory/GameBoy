@@ -2,7 +2,8 @@
 
 - **Author:** Héctor Ginory Alemán
 <br>
-- **Tecnologies:** HTML5, CSS3, JavaScript - ES6, Git
+
+- **Tecnologies:**  HTML5, CSS3, JavaScript - ES6, Git
 <br>
 <br>
 
